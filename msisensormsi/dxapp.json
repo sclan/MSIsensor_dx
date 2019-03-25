@@ -11,7 +11,10 @@
     "upstreamLicences": [ "MIT License" ],
     "upstreamAuthor": "Beifang Niu && Kai Ye WUGSC",
     "contactEmail": [ "bniu@sccas.cn" ],
-    "citations": [ "doi: 10.1093/bioinformatics/btt755" ]
+    "citations": [ "doi: 10.1093/bioinformatics/btt755", 
+                   "doi: 10.1200/PO.17.00084",  
+                   "doi: 10.1038/nm.4333" 
+                 ]
   },
   "inputSpec": [
     {
@@ -139,7 +142,7 @@
   "runSpec": {
     "assetDepends": [
         {
-           "id": "record-FXBbkPQ0YfVV7V7y1zpP8j9b"
+           "id": "record-FXG2V680XbjjB1zP6KpqG1px"
         }
     ],
     "file": "src/code.sh",
