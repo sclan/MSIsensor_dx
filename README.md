@@ -17,7 +17,8 @@ Sequence Data.” Bioinformatics 30, no. 7 (April 1, 2014): 1015–16. https://d
 Zehir, Ahmet, Ryma Benayed, Ronak H. Shah, Aijazuddin Syed, Sumit Middha, Hyunjae R. Kim, Preethi Srinivasan, et al. “Mutational Landscape of Metastatic Cancer Revealed from Prospective Clinical
 Sequencing of 10,000 Patients.” Nature Medicine 23, no. 6 (June 2017): 703–13. https://doi.org/10.1038/nm.4333.
 
-Todo: 
+Todo/Questions: 
 1. figure out how to get the asset onto different (cloud) region and have different record id 
 2. better app info page (right now it's just readme.md on the left and settings on the right on applet settings page)
 the "details" section in the dxapp.json doesn't show up on the left side of the applet info page
+3. how does app build handle applet and asset bundle or should I even worry about that?
