@@ -1,0 +1,166 @@
+{
+  "name": "msisensormsi",
+  "title": "MSIsensor msi mode",
+  "summary": "Perform msi (microsatellite instability) scoring",
+  "dxapi": "1.0.0",
+  "version": "0.0.1",
+  "details": {
+    "repoUrl": "git@github.com:ding-lab/msisensor.git",
+    "upstreamUrl": "https://github.com/ding-lab/msisensor/",
+    "upstreamVersion": "0.5",
+    "upstreamLicences": [ "MIT License" ],
+    "upstreamAuthor": "Beifang Niu && Kai Ye WUGSC",
+    "contactEmail": [ "bniu@sccas.cn" ],
+    "citations": [ "doi: 10.1093/bioinformatics/btt755" ]
+  },
+  "inputSpec": [
+    {
+      "name": "i_mi",
+      "label": "microsats input file",
+      "help": "",
+      "class": "file",
+      "patterns": ["*"],
+      "optional": false
+    },
+    {
+      "name": "i_nom",
+      "label": "normal input mapping",
+      "help": "",
+      "class": "file",
+      "patterns": ["*.bam"],
+      "optional": false
+    },
+    {
+      "name": "i_nom_i",
+      "label": "normal input mapping index",
+      "help": "",
+      "class": "file",
+      "patterns": ["*.bai"],
+      "optional": false
+    },
+    {
+      "name": "i_tum",
+      "label": "tumor input mapping",
+      "help": "",
+      "class": "file",
+      "patterns": ["*.bam"],
+      "optional": false
+    },
+    {
+      "name": "i_tum_i",
+      "label": "tumor input mapping index",
+      "help": "",
+      "class": "file",
+      "patterns": ["*.bai"],
+      "optional": false
+    },
+    {
+      "name": "i_bed",
+      "label": "bed input",
+      "help": "",
+      "class": "file",
+      "patterns": ["*.bed"],
+      "optional": true
+    },
+    {
+      "name": "fdr",
+      "label": "FDR threshold (Default 0.05)",
+      "help": "",
+      "class": "float",
+      "optional": true,
+      "default": 0.05
+    },
+    {
+      "name": "m_com",
+      "label": "Minimal comentropy threshold (Default 1)",
+      "help": "",
+      "class": "float",
+      "optional": true,
+      "default": 1
+    },
+    {
+      "name": "cov",
+      "label": "Coverage threshold (Default 20)",
+      "help": "",
+      "class": "int",
+      "optional": true,
+      "default": 20
+    },
+    {
+      "name": "cov_n",
+      "label": "Coverage normalization (0No 1Yes Default 0)",
+      "help": "",
+      "class": "int",
+      "optional": true,
+      "default": 0
+    },
+    {
+      "name": "s_s",
+      "label": "Span size around window for extracting reads (Default 500)",
+      "help": "",
+      "class": "int",
+      "optional": true,
+      "default": 500
+    },
+    {
+      "name": "t_num",
+      "label": "Thread number (Default 1)",
+      "help": "",
+      "class": "int",
+      "optional": true,
+      "default": 1
+    },
+    {
+      "name": "only_ho",
+      "label": "output homopolymer only (0No 1Yes Default 0)",
+      "help": "",
+      "class": "int",
+      "optional": true,
+      "default": 0
+    },
+    {
+      "name": "only_mi",
+      "label": "output microsats only (0No 1Yes Default 0)",
+      "help": "",
+      "class": "int",
+      "optional": true,
+      "default": 0
+    }
+  ],
+  "outputSpec": [
+    {
+      "name": "output",
+      "label": "Output files",
+      "help": "",
+      "class": "array:file",
+      "patterns": ["*"]
+    }
+  ],
+  "runSpec": {
+    "assetDepends": [
+        {
+           "id": "record-FXBbkPQ0YfVV7V7y1zpP8j9b"
+        }
+    ],
+    "file": "src/code.sh",
+    "release": "16.04",
+    "interpreter": "bash",
+    "timeoutPolicy": {
+      "*": {
+        "hours": 48
+      }
+    },
+    "distribution": "Ubuntu"
+  },
+  "ignoreReuse": false,
+  "regionalOptions": {
+    "aws:us-east-1": {
+      "systemRequirements": {
+        "*": {
+          "instanceType": "mem1_ssd1_x2"
+        }
+      }
+    }
+  },
+  "authorizedUsers": ["PUBLIC"]
+}

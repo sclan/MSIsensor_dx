@@ -1,0 +1,14 @@
+{
+ "name": "msisensor_asset",
+ "title": "MSIsensor deployment for the DNAnexus platform",
+ "description": "From https://github.com/ding-lab/msisensor. If you used this tool for your work, please cite PMID 24371154 and 30211344",
+ "version": "0.0.1",
+ "distribution": "Ubuntu",
+ "instanceType": "mem2_ssd1_x4",
+ "release": "16.04",
+ "execDepends": [
+  {"name": "zlib1g-dev", "package_manager": "apt"},
+  {"name": "libncurses5-dev", "package_manager": "apt"},
+  {"name": "libncursesw5-dev", "package_manager": "apt"}
+ ]
+}
